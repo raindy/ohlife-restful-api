@@ -1,0 +1,11 @@
+{
+  "name": "express-restful-api",
+  "version": "0.0.1",
+  "dependencies": {
+    "restify": "latest",
+    "mongoose": "latest"
+  },
+  "engines": {
+        "node": ">=0.10.0"
+  }
+}
