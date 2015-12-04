@@ -11,9 +11,9 @@ exports.showArticles = function(req, res, next) {
         //.select('name')
         .limit(perPage)
         .skip(perPage * page)
-        //.sort({
-        //    name: 'asc'
-        //})
+        .sort({
+            intime: 'desc'
+        })
         .exec(function(err, events) {
             Article.count().exec(function(err, count) {
 
@@ -45,10 +45,7 @@ exports.createArticle = function(req, res, next) {
                 data: "Error occured: " + err
             })
         } else {
-            res.json({
-                type: true,
-                data: article
-            })
+            res.json(article)
         }
     })
 }

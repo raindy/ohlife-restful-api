@@ -8,6 +8,6 @@ ArticleSchema.add({
     slug: String,
     content: String,
     author: String,
-    comments: [Comment]
+    intime: { type: Date, default: Date.now }
 });
 mongoose.model('Article', ArticleSchema);
